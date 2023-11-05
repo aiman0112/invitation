@@ -1,115 +1,197 @@
+/* Default styles for larger screens */
+/* Default styles for larger screens */
 body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-   
-   picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-   }
-
-   .timer {
-    position: absolute;
-    left: 180px; /* Adjust the left position as needed */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .timer-box {
-    background-color: rgba(255, 255, 255, 0.3); /* White with transparency */
-    margin: 5px;
-    padding: 50px;
-    border-radius: 20px;
-    text-align: center;
-  }
-  
-  .timer-value {
-    font-size: 24px;
-  }
-  
-  .timer-label {
-    font-size: 14px;
-  }
- 
-  
-
-  .text-box {
-    position: absolute;
-    right: 150px; /* Adjust the right position as needed */
-    background-color: rgba(255, 255, 255, 0.3); /* More transparent white background */
-    padding: 100px;
-    border-radius: 50px;
-    text-align: center;
-    width: 40%; /* Change the width to your desired value */
-    height: 70%; /* Change the height to your desired value */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-  
+
+/* Image styles */
+picture img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Timer styles for larger screens */
+.timer {
+  position: absolute;
+  left: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Timer box styles for larger screens */
+.timer-box {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 5px;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Timer value and label styles for larger screens */
+.timer-value {
+  font-size: 2.5vw;
+}
+
+.timer-label {
+  font-size: 1.4vw;
+}
+
+/* Text box styles for larger screens */
+.text-box {
+  position: absolute;
+  right: 150px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 100px;
+  border-radius: 50px;
+  text-align: center;
+  width: 40%;
+  height: 70%;
+}
+
+/* Line styles */
+.lline {
+  border: none;
+  width: 100%;
+  border-top: 1px solid #333;
+  margin: 0.5vw;
+}
+
+/* Text styles for larger screens */
+.line {
+  font-size: 1.5vw;
+  margin: 1vw 0;
+  color: #333;
+}
+
+.line-bold {
+  font-weight: bold;
+}
+
+.line-italic {
+  font-style: italic;
+}
+
+.line-large {
+  font-size: 2.5vw;
+}
+
+/* Date and time styles for larger screens */
+.date-time {
+  text-align: center;
+  margin: 2vw 0;
+}
+
+/* Month style for larger screens */
+.month {
+  font-size: 2.5vw;
+}
+
+/* Day style for larger screens */
+.day {
+  font-size: 3.5vw;
+  font-weight: bold;
+  display: block;
+}
+
+/* Date style for larger screens */
+date {
+  font-size: 2.5vw;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+/* Time style for larger screens */
+time {
+  font-size: 2.5vw;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Year style for larger screens */
+year {
+  font-size: 2.5vw;
+}
+
+/* Mobile responsive styles using media queries */
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  body {
+    background-size: contain;
+  }
+
+  .timer {
+    left: 5vw;
+    right: 5vw;
+    width: auto;
+    padding: 2vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .timer-box {
+    padding: 3vw;
+    border-radius: 3vw;
+  }
+
+  .timer-value {
+    font-size: 3vw;
+  }
+
+  .timer-label {
+    font-size: 1.4vw;
+  }
+
+  .text-box {
+    height: 70%;
+    padding: 8vw;
+    border-radius: 8vw;
+    right: 5vw;
+  }
+
   .line {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #333;
+    font-size: 1.5vw;
+    margin: 1vw 0;
   }
-  
-  .line-bold {
-    font-weight: bold;
-  }
-  
-  .line-italic {
-    font-style: italic;
-  }
-  
+
   .line-large {
-    font-size: 24px;
+    font-size: 2.5vw;
   }
-  
+
   .date-time {
-    text-align: center;
-    margin: 20px 0;
+    margin: 2vw 0;
   }
-  
+
   .month {
-    font-size: 24px;
+    font-size: 2.5vw;
   }
-  
+
   .day {
-    font-size: 36px;
-    font-weight: bold;
-    display: inline-block;
+    font-size: 3.5vw;
+    display: block;
   }
-  
-  .date {
-    font-size: 24px;
-    margin: 0 10px;
-    display: inline-block;
-  }
-  
-  .time {
-    font-size: 20px;
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  
+
+  .date,
+  .time,
   .year {
-    font-size: 24px;
+    font-size: 2.5vw;
   }
-  
+
   .lline {
-    border: none;
-    width: 100%;
-    border-top: 1px solid #333; /* Adjust the line color, style, and thickness as needed */
-    margin: 0 5px; /* Adjust the margin as needed */
+    margin: 0.5vw;
   }
-  
+}
